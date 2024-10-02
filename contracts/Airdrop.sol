@@ -35,7 +35,7 @@ contract Airdrop {
     event Debug(bytes32 leaf, bool proofValid);
 
 
-    function ownsNFT(address _user) private view returns (bool) {
+    function ownsNFT(address _user) public view returns (bool) {
           IERC721 baycNft = IERC721(bayc);
         return baycNft.balanceOf(_user) > 0;
     }
